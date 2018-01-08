@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import _ from 'lodash'
-import './app.css';
+import './app.css'
 
 
 class App extends Component {
@@ -16,9 +16,9 @@ class App extends Component {
       <div id='app'>
         App says hello!!!
       </div>
-    );
+    )
   }
 }
 
 
-export default App;
+export default App
