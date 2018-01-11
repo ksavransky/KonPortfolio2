@@ -13,6 +13,12 @@ class Menu extends Component {
     const isMenuVisible = this.props.visible ? 'visible' : 'hidden'
     return (
       <div id='menu' className={isMenuVisible}>
+        <div id='menu-logo'></div>
+        <div className='menu-item-container'>
+          <div className='menu-item'>About Me</div>
+          <div className='menu-item'>My Projects</div>
+          <div className='menu-item'>Contact Me</div>
+        </div>
       </div>
     )
   }

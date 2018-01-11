@@ -6,7 +6,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  transition:opacity 0.5s linear;
+  transition:opacity 0.3s linear;
 }
 
 #menu.visible {
@@ -15,4 +15,26 @@
 
 #menu.hidden {
   opacity: 0;
+}
+
+#menu .menu-item-container {
+  display: flex;
+  margin-top: 22px;
+  margin-left: 15%;
+  font-size: 20px;
+}
+
+#menu .menu-item-container .menu-item{
+  margin-right: 75px;
+  width: 150px;
+  cursor: pointer;
+  color: grey;
+}
+
+#menu .menu-item-container .menu-item.active{
+  color: white;
+}
+
+#menu .menu-item-container .menu-item:hover{
+  color: white;
 }
