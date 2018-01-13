@@ -15,9 +15,9 @@ class Menu extends Component {
       <div id='menu' className={isMenuVisible}>
         <div id='menu-logo'></div>
         <div className='menu-item-container'>
-          <div className='menu-item'>About Me</div>
-          <div className='menu-item'>My Projects</div>
-          <div className='menu-item'>Contact Me</div>
+          <div className='menu-item'>Home</div>
+          <div className='menu-item'>Projects</div>
+          <div className='menu-item'>Contact</div>
         </div>
       </div>
     )
