@@ -28,17 +28,17 @@
 
 #menu .menu-item-container .menu-item{
   cursor: pointer;
-  color: #d0d5dc;
+  color: #c8d5dc;
   text-align: center;
   margin-left: 30px;
   transition: .5s all ease-out;
   text-decoration: none;
   padding: 2px 3px 2px 5px;
   border-radius: 3px;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
 #menu .menu-item-container .menu-item.active, #menu .menu-item-container .menu-item:hover{
   color: white;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 1);
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
 }
