@@ -14,4 +14,9 @@
   margin: 0;
   position: relative;
   background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
