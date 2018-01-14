@@ -9,14 +9,18 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isMenuVisible: true
+      isMenuVisible: true,
+      isSafari: false
     }
     this.documentScrollTop = 0
 
     this.documentScrollListener = this.documentScrollListener.bind(this)
+    this.getDocumentScrollPosition = this.getDocumentScrollPosition.bind(this)
+    this.setDocumentScrollPosition = this.setDocumentScrollPosition.bind(this)
   }
 
   componentDidMount () {
+    this.setIsSafari()
     window.addEventListener('scroll', this.documentScrollListener)
   }
 
@@ -24,13 +28,35 @@ class App extends Component {
     window.removeEventListener('scroll', this.documentScrollListener)
   }
 
+  setIsSafari () {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('safari') !== -1 && !(ua.indexOf('chrome') > -1)) {
+      this.setState({isSafari: true})
+    }
+  }
+
+  getDocumentScrollPosition () {
+    if (this.state.isSafari) {
+      return document.body.scrollTop
+    }
+    return document.documentElement.scrollTop
+  }
+
+  setDocumentScrollPosition (pos) {
+    if (this.state.isSafari) {
+      document.body.scrollTop = pos
+    } else {
+      document.documentElement.scrollTop = pos
+    }
+  }
+
   documentScrollListener () {
     this.menuVisibilityControl()
-    this.documentScrollTop = document.documentElement.scrollTop
+    this.documentScrollTop = this.getDocumentScrollPosition()
   }
 
   menuVisibilityControl () {
-    const newScrollTop = document.documentElement.scrollTop
+    const newScrollTop = this.getDocumentScrollPosition()
     if (this.documentScrollTop < newScrollTop && this.state.isMenuVisible) {
       this.setState({
         isMenuVisible: false
