@@ -1,5 +1,5 @@
 #menu {
-  background: linear-gradient(35deg, #45565f , #edf9ff);
+  background: black;
   height: 70px;
   position: fixed;
   top: 0;
@@ -28,7 +28,7 @@
 
 #menu .menu-item-container .menu-item{
   cursor: pointer;
-  color: #c8d5dc;
+  color: #a0a7ab;
   text-align: center;
   margin-left: 30px;
   transition: .5s all ease-out;
@@ -45,7 +45,7 @@
   margin-left: 30px;
   margin-top: -4px;
   font-family: "Lato";
-  color: #e7faff;
+  color: white;
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
@@ -53,9 +53,10 @@
 
 #menu .menu-item-container .menu-logo > div {
   margin-bottom: 2px;
+  color: white;
 }
 
 #menu .menu-item-container .menu-item.active, #menu .menu-item-container .menu-item:hover{
   color: white;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 4px 3px rgba(250, 250, 250, 0.5);
 }
