@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import _ from 'lodash'
-import Section from '../Section/section.jsx'
 import Menu from '../Menu/menu.jsx'
+import Section from '../Section/section.jsx'
+import TopSection from '../TopSection/topSection.jsx'
 import './app.css'
 
 
@@ -46,16 +46,16 @@ class App extends Component {
     return (
       <div id='app'>
         <Menu visible={this.state.isMenuVisible}/>
-        <Section id='top-section'>
-          Hi
+        <Section>
+          <TopSection />
         </Section>
-        <Section backgroundColor='purple'>
+        <Section backgroundColor='color2'>
           You
         </Section>
-        <Section backgroundColor='white'>
+        <Section backgroundColor='color1'>
           Cool
         </Section>
-        <Section backgroundColor='purple'>
+        <Section backgroundColor='color2'>
           Dude
         </Section>
       </div>

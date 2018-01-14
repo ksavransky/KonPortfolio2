@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import _ from 'lodash'
 import './section.css'
 
 
@@ -11,7 +10,7 @@ class Section extends Component {
 
   render() {
     return (
-      <div id={this.props.id} className={'section ' +  this.props.backgroundColor}>
+      <div className={'section ' +  this.props.backgroundColor}>
         <div className='section-content'>
           {this.props.children}
         </div>
@@ -21,7 +20,6 @@ class Section extends Component {
 }
 
 Section.propTypes = {
-  id: PropTypes.string,
   backgroundColor: PropTypes.string
 }
 

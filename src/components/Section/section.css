@@ -3,29 +3,17 @@
   height: 100vh;
 }
 
-.section.white {
+.section-content {
+  width: 100%;
+  height: 100%;
+}
+
+.section.color1 {
   background: white;
   color: #390B46;
 }
 
-.section.purple {
+.section.color2 {
   background: #c8d9e2;
   color: white;
-}
-
-#top-section {
-  background: url(../../images/backgrounds/sf-downtown-night.jpg);
-  background-position: center 0px;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  overflow: hidden;
-  width: 100%;
-  margin: 0;
-  position: relative;
 }
