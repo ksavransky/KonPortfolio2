@@ -38,6 +38,23 @@
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.1);
 }
 
+#menu .menu-item-container .menu-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 30px;
+  margin-top: -4px;
+  font-family: "Lato";
+  color: #acdbff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#menu .menu-item-container .menu-logo > div {
+  margin-bottom: 2px;
+}
+
 #menu .menu-item-container .menu-item.active, #menu .menu-item-container .menu-item:hover{
   color: white;
   text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
