@@ -12,9 +12,9 @@ class TopSection extends Component {
     return (
       <div id='top-section'>
         <div id='about-me'>
-          <p>Hi, my name is Kon. I'm a Full Stack Developer.</p>
-          <p>I love to code, have strong leadership and business sense, and a knack for design.</p>
-          <p>I'm ready to help your team build a great application.</p>
+          <h1>Hi, my name is Konstantin.</h1>
+          <h1>I'm a Full Stack Developer.</h1>
+          <h3>I love to code, have strong leadership and business sense, and a knack for design.</h3>
         </div>
       </div>
     )

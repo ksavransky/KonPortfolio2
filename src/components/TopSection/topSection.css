@@ -20,3 +20,8 @@
   text-align: center;
   color: white;
 }
+
+#top-section h1, #top-section h3{
+  margin-left: 10px;
+  margin-right: 10px;
+}
