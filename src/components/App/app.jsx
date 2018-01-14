@@ -57,11 +57,11 @@ class App extends Component {
 
   menuVisibilityControl () {
     const newScrollTop = this.getDocumentScrollPosition()
-    if (this.documentScrollTop < newScrollTop && this.state.isMenuVisible) {
+    if (this.state.isMenuVisible && this.documentScrollTop > 70 && this.documentScrollTop < newScrollTop) {
       this.setState({
         isMenuVisible: false
       })
-    } else if (this.documentScrollTop > newScrollTop && !this.state.isMenuVisible) {
+    } else if (!this.state.isMenuVisible && this.documentScrollTop > newScrollTop) {
       this.setState({
         isMenuVisible: true
       })
