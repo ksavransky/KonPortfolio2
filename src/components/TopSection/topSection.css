@@ -19,6 +19,11 @@
   align-items: center;
   text-align: center;
   color: white;
+  text-shadow:
+ -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+   1px 1px 0 #000;
 }
 
 #top-section h1, #top-section h3{
