@@ -11,7 +11,7 @@ class Section extends Component {
 
   render() {
     return (
-      <div className={'section ' +  this.props.backgroundColor}>
+      <div id={this.props.id} className={'section ' +  this.props.backgroundColor}>
         <div className='section-content'>
           {this.props.children}
         </div>
@@ -21,6 +21,7 @@ class Section extends Component {
 }
 
 Section.propTypes = {
+  id: PropTypes.string,
   backgroundColor: PropTypes.string
 }
 

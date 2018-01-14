@@ -46,7 +46,7 @@ class App extends Component {
     return (
       <div id='app'>
         <Menu visible={this.state.isMenuVisible}/>
-        <Section backgroundColor='white'>
+        <Section id='top-section'>
           Hi
         </Section>
         <Section backgroundColor='purple'>
