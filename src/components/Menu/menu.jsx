@@ -6,6 +6,12 @@ import './menu.css'
 class Menu extends Component {
   constructor(props){
     super(props)
+
+    this.handleMenuItemClick = this.handleMenuItemClick.bind(this)
+  }
+
+  handleMenuItemClick (sectionId) {
+    this.props.scrollToSection(sectionId)
   }
 
   render() {
@@ -13,7 +19,7 @@ class Menu extends Component {
     return (
       <div id='menu' className={isMenuVisible}>
         <div className='menu-item-container'>
-          <div className='menu-logo'>
+          <div className='menu-logo glow' onClick={() => { this.handleMenuItemClick(1)}}>
             <div>Konstantin</div>
             <div>Savransky</div>
           </div>
@@ -27,8 +33,10 @@ class Menu extends Component {
 }
 
 Menu.propTypes = {
-  visible: PropTypes.bool
+  visible: PropTypes.bool,
+  scrollToSection: PropTypes.func
 }
+
 
 
 export default Menu

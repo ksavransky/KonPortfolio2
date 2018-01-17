@@ -83,7 +83,7 @@ class App extends Component {
   render() {
     return (
       <div id='app'>
-        <Menu visible={this.state.isMenuVisible}/>
+        <Menu visible={this.state.isMenuVisible} scrollToSection={this.scrollToSection}/>
         <Section sectionNumber={1} >
           <TopSection scrollToSection={this.scrollToSection}/>
         </Section>
