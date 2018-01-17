@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Menu from '../Menu/menu.jsx'
 import Section from '../Section/section.jsx'
 import TopSection from '../TopSection/topSection.jsx'
+import SkillsSection from '../SkillsSection/skillsSection.jsx'
 import Scroll from 'react-scroll'
 import './app.css'
 
@@ -86,8 +87,8 @@ class App extends Component {
         <Section sectionNumber={1} >
           <TopSection scrollToSection={this.scrollToSection}/>
         </Section>
-        <Section sectionNumber={2} backgroundColor='color2'>
-          Yeah
+        <Section sectionNumber={2} backgroundColor='white'>
+          <SkillsSection />
         </Section>
         <Section backgroundColor='color1'>
           Cool

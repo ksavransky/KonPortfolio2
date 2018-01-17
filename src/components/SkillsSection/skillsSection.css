@@ -1,0 +1,10 @@
+#skills-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#skills-section #my-portrait {
+  height: 150px;
+}
