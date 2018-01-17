@@ -12,6 +12,10 @@
   background: white;
   color: #390B46;
 }
+.section.lightgray {
+  background: #f7f7f7;
+  color: #390B46;
+}
 
 .section.color2 {
   background: #c8d9e2;
