@@ -17,19 +17,38 @@ class App extends Component {
 
     this.state = {
       isMenuVisible: true,
-      isSafari: false
+      isSafari: false,
+      activeMenuItem: 1
     }
 
     this.documentScrollTop = 0
+    this.sectionPositionTops = {
+      1: 0,
+      2: 0,
+      3: 0
+    }
   }
 
   componentDidMount () {
     this.setIsSafari()
+    this.setSectionPositionTops()
     window.addEventListener('scroll', this.documentScrollListener)
+    // add a resize addEventListener that resets the this.sectionPositionTops by calling setSectionPositionTops()
   }
 
   componentWillUnmount () {
     window.removeEventListener('scroll', this.documentScrollListener)
+    // REMOVE a resize EventListener that resets the this.sectionPositionTops by calling setSectionPositionTops()
+  }
+
+  setSectionPositionTops () {
+    // set the position tops Y coord of each section
+  }
+
+  setActiveMenuItem () {
+    // do a calculation based on scroll position and this.sectionPositionTops to figure out active menu item
+    // do a setstate on activeMenuItem if the result is different than the prior result
+    // pass set state var to menu jsx
   }
 
   setIsSafari () {
@@ -56,6 +75,7 @@ class App extends Component {
 
   documentScrollListener () {
     this.menuVisibilityControl()
+    this.setActiveMenuItem()
     this.documentScrollTop = this.getDocumentScrollPosition()
   }
 
@@ -83,7 +103,7 @@ class App extends Component {
   render() {
     return (
       <div id='app'>
-        <Menu visible={this.state.isMenuVisible} scrollToSection={this.scrollToSection}/>
+        <Menu activeMenuItem={this.state.activeMenuItem} visible={this.state.isMenuVisible} scrollToSection={this.scrollToSection}/>
         <Section sectionNumber={1} >
           <TopSection scrollToSection={this.scrollToSection}/>
         </Section>

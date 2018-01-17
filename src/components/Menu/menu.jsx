@@ -34,7 +34,8 @@ class Menu extends Component {
 
 Menu.propTypes = {
   visible: PropTypes.bool,
-  scrollToSection: PropTypes.func
+  scrollToSection: PropTypes.func,
+  activeMenuItem: PropTypes.number
 }
 
 
