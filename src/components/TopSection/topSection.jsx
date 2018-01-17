@@ -7,6 +7,12 @@ import './topSection.css'
 class TopSection extends Component {
   constructor(props){
     super(props)
+
+    this.handleArrowClick = this.handleArrowClick.bind(this)
+  }
+
+  handleArrowClick () {
+    this.props.scrollToSection(2)
   }
 
   render() {
@@ -17,10 +23,15 @@ class TopSection extends Component {
           <h1>I'm a Full Stack Developer.</h1>
           <h3>I love to code, have keen product sense, and a knack for design.</h3>
         </div>
-        <img src={downArrow} id='down-arrow' />
+        <img src={downArrow} id='down-arrow' onClick={this.handleArrowClick} />
       </div>
     )
   }
 }
+
+TopSection.propTypes = {
+  scrollToSection: PropTypes.func
+}
+
 
 export default TopSection

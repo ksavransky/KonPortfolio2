@@ -2,21 +2,24 @@ import React, { Component } from 'react'
 import Menu from '../Menu/menu.jsx'
 import Section from '../Section/section.jsx'
 import TopSection from '../TopSection/topSection.jsx'
+import Scroll from 'react-scroll'
 import './app.css'
-
 
 class App extends Component {
   constructor(props){
     super(props)
+
+    this.scrollToSection = this.scrollToSection.bind(this)
+    this.documentScrollListener = this.documentScrollListener.bind(this)
+    this.getDocumentScrollPosition = this.getDocumentScrollPosition.bind(this)
+    this.setDocumentScrollPosition = this.setDocumentScrollPosition.bind(this)
+
     this.state = {
       isMenuVisible: true,
       isSafari: false
     }
-    this.documentScrollTop = 0
 
-    this.documentScrollListener = this.documentScrollListener.bind(this)
-    this.getDocumentScrollPosition = this.getDocumentScrollPosition.bind(this)
-    this.setDocumentScrollPosition = this.setDocumentScrollPosition.bind(this)
+    this.documentScrollTop = 0
   }
 
   componentDidMount () {
@@ -68,15 +71,23 @@ class App extends Component {
     }
   }
 
+  scrollToSection (sectionNumber) {
+    Scroll.scroller.scrollTo(`section-${sectionNumber}`, {
+      duration: 1500,
+      delay: 100,
+      smooth: true
+    })
+  }
+
   render() {
     return (
       <div id='app'>
         <Menu visible={this.state.isMenuVisible}/>
-        <Section>
-          <TopSection />
+        <Section sectionNumber={1} >
+          <TopSection scrollToSection={this.scrollToSection}/>
         </Section>
-        <Section backgroundColor='color2'>
-          You
+        <Section sectionNumber={2} backgroundColor='color2'>
+          Yeah
         </Section>
         <Section backgroundColor='color1'>
           Cool

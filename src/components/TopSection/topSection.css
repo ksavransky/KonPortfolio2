@@ -36,4 +36,11 @@
   width: 50px;
   position: absolute;
   bottom: 50px;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.5s all ease-out;
+}
+
+#top-section #down-arrow:hover{
+  opacity: 1;
 }

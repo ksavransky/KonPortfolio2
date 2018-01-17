@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import Scroll from 'react-scroll'
 import './section.css'
 
 
@@ -9,17 +10,19 @@ class Section extends Component {
   }
 
   render() {
+    let ScrollElement = Scroll.Element
     return (
-      <div className={'section ' +  this.props.backgroundColor}>
-        <div className='section-content'>
-          {this.props.children}
-        </div>
-      </div>
+      <ScrollElement name={'section-' + this.props.sectionNumber} className={'section ' +  this.props.backgroundColor}>
+          <div className='section-content'>
+            {this.props.children}
+          </div>
+      </ScrollElement>
     )
   }
 }
 
 Section.propTypes = {
+  sectionNumber: PropTypes.number,
   backgroundColor: PropTypes.string
 }
 
