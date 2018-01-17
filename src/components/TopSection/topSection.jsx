@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import downArrow from '../../images/downarrow.png'
 import './topSection.css'
 
 
@@ -16,6 +17,7 @@ class TopSection extends Component {
           <h1>I'm a Full Stack Developer.</h1>
           <h3>I love to code, have keen product sense, and a knack for design.</h3>
         </div>
+        <img src={downArrow} id='down-arrow' />
       </div>
     )
   }
