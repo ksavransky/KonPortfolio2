@@ -1,11 +1,25 @@
 #skills-section {
   display: flex;
+  height: 100%;
+}
+
+#skills-section .skill-row {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+#skills-section .skill-row .skill-cell {
+  height: 100%;
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 #skills-section #my-portrait {
   height: 170px;
+  width: 150px;
   border-radius: 65px;
 }

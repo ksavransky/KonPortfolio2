@@ -13,7 +13,15 @@ import './skillsSection.css'
 
 
 const getImageSourceFromId = {
-  0: konStraight
+  0: konNorthWest,
+  1: konNorth,
+  2: konNorthEast,
+  3: konWest,
+  4: konStraight,
+  5: konEast,
+  6: konSouthWest,
+  7: konSouth,
+  8: konSouthEast
 }
 
 class SkillsSection extends Component {
@@ -21,15 +29,36 @@ class SkillsSection extends Component {
     super(props)
 
     this.state = {
-      imageDirectionId: 0
+      lookDirectionId: 4
     }
+
+    this.changeLookDirection = this.changeLookDirection.bind(this)
   }
 
+  changeLookDirection (lookId) {
+    this.setState({lookDirectionId: lookId})
+  }
 
   render() {
     return (
       <div id='skills-section'>
-        <img src={getImageSourceFromId[this.state.imageDirectionId]} id='my-portrait' />
+        <span className='skill-row'>
+          <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(0)}></div>
+          <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(3)}></div>
+          <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(6)}></div>
+        </span>
+        <span className='skill-row'>
+          <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(1)}></div>
+          <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(4)}>
+            <img src={getImageSourceFromId[this.state.lookDirectionId]} id='my-portrait' />
+          </div>
+          <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(7)}></div>
+        </span>
+        <span className='skill-row'>
+          <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(2)}></div>
+          <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(5)}></div>
+          <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(8)}></div>
+        </span>
       </div>
     )
   }
