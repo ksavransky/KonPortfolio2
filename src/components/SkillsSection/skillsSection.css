@@ -18,7 +18,7 @@
 #skills-section .skill-row h1{
   width: max-content;
   align-self: baseline;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 #skills-section .skill-row .skill-cell {
@@ -31,7 +31,7 @@
 
 #skills-section #my-portrait {
   height: 170px;
-  min-width: 150px;
+  width: 150px;
   border-radius: 65px;
 }
 
