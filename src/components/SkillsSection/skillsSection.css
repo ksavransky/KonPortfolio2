@@ -15,10 +15,17 @@
   width: 100%;
 }
 
-#skills-section .skill-row h1{
+#skills-section .skill-row h2{
   width: max-content;
   align-self: baseline;
   margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
+@media print, screen and (min-width: 45em) {
+  #skills-section .skill-row h2{
+    font-size: 2.5rem;
+  }
 }
 
 #skills-section .skill-row .skill-cell {
@@ -36,13 +43,13 @@
 }
 
 #skills-section .logo {
-  height: 40px;
+  height: 45px;
   position: absolute;
 }
 
 @media print, screen and (min-width: 45em) {
   #skills-section .logo {
-    height: 50px;
+    height: 55px;
   }
 }
 
@@ -63,26 +70,26 @@
 }
 
 #skills-section #es6-logo {
-  left: 37%;
-  top: 10%;
+  left: 35%;
+  top: 15%;
   transform: scale(1.1);
 }
 
 #skills-section #react-logo {
   left: 47%;
-  top: 5%;
+  top: 17%;
   transform: scale(1.4);
 }
 
 #skills-section #redux-logo {
   left: 59%;
-  top: 9%;
+  top: 15%;
   transform: scale(1.2);
 }
 
 #skills-section #node-logo {
-  left: 80%;
-  top: 10%;
+  left: 20%;
+  top: 20%;
   transform: scale(1.1);
 }
 
@@ -126,8 +133,8 @@
 }
 
 #skills-section #ror-logo {
-  left: 70%;
-  top: 30%;
+  left: 74%;
+  top: 27%;
   transform: scale(1.3);
 }
 

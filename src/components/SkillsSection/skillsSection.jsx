@@ -98,7 +98,7 @@ class SkillsSection extends Component {
         </span>
         <span className='skill-row'>
           <div className='skill-cell title' onMouseEnter={() => this.changeLookDirection(1)}>
-            <h1 id='title'>Technology I Use</h1>
+            <h2 id='title'>Technology I Use</h2>
           </div>
           <div className='skill-cell' onMouseEnter={() => this.changeLookDirection(4)}>
             <img src={getImageSourceFromId[this.state.lookDirectionId]} id='my-portrait' />
