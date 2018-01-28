@@ -107,7 +107,7 @@ class App extends Component {
         <Section sectionNumber={1} >
           <TopSection scrollToSection={this.scrollToSection}/>
         </Section>
-        <Section sectionNumber={2} backgroundColor='lightgray'>
+      <Section id='skills-section-container' sectionNumber={2} backgroundColor='lightgray' >
           <SkillsSection />
         </Section>
         <Section backgroundColor='color1'>

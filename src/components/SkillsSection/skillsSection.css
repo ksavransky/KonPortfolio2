@@ -1,6 +1,11 @@
+#skills-section-container {
+  min-height: 750px;
+}
+
 #skills-section {
   display: flex;
   height: 100%;
+  position: relative;
 }
 
 #skills-section .skill-row {
@@ -20,6 +25,117 @@
 
 #skills-section #my-portrait {
   height: 170px;
-  width: 150px;
+  min-width: 150px;
   border-radius: 65px;
+}
+
+#skills-section .logo {
+  height: 50px;
+  position: absolute;
+}
+
+@media print, screen and (min-width: 40em) {
+  #skills-section .logo {
+    height: 75px;
+  }
+}
+
+#skills-section #htmlcssjs-logo {
+  left: 5%;
+  top: 5%;
+}
+
+#skills-section #jquery-logo {
+  left: 5%;
+  top: 30%;
+}
+
+#skills-section #es6-logo {
+  left: 35%;
+  top: 5%;
+}
+
+#skills-section #react-logo {
+  left: 50%;
+  top: 10%;
+}
+
+#skills-section #redux-logo {
+  left: 65%;
+  top: 5%;
+}
+
+#skills-section #node-logo {
+  left: 80%;
+  top: 10%;
+}
+
+#skills-section #reactnative-logo {
+  left: 90%;
+  top: 25%;
+}
+
+#skills-section #ror-logo {
+  left: 75%;
+  top: 40%;
+}
+
+#skills-section #phpmysql-logo {
+  left: 90%;
+  top: 60%;
+}
+
+#skills-section #postgres-logo {
+  left: 40%;
+  top: 5%;
+}
+
+#skills-section #mongo-logo {
+  left: 40%;
+  top: 5%;
+}
+
+#skills-section #bs-logo {
+  left: 40%;
+  top: 5%;
+}
+
+#skills-section #foundation-logo {
+  left: 40%;
+  top: 5%;
+}
+
+#skills-section #d3-logo {
+  left: 40%;
+  top: 5%;
+}
+
+#skills-section #canvas-logo {
+  left: 5%;
+  bottom: 10%;
+}
+
+#skills-section #highcharts-logo {
+  left: 20%;
+  bottom: 5%;
+}
+
+#skills-section #sass-logo {
+  left: 35%;
+  bottom: 10%;
+}
+
+#skills-section #webpack-logo {
+  left: 50%;
+  bottom: 5%;
+}
+
+#skills-section #git-logo {
+  left: 75%;
+  bottom: 10%;
+}
+
+#skills-section #wordpress-logo {
+  left: 90%;
+  bottom: 5%;
 }

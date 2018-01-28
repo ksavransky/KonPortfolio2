@@ -12,7 +12,7 @@ class Section extends Component {
   render() {
     let ScrollElement = Scroll.Element
     return (
-      <ScrollElement name={'section-' + this.props.sectionNumber} className={'section ' +  this.props.backgroundColor}>
+      <ScrollElement id={this.props.id} name={'section-' + this.props.sectionNumber} className={'section ' +  (this.props.backgroundColor || '')}>
           <div className='section-content'>
             {this.props.children}
           </div>
@@ -22,6 +22,7 @@ class Section extends Component {
 }
 
 Section.propTypes = {
+  id: PropTypes.string,
   sectionNumber: PropTypes.number,
   backgroundColor: PropTypes.string
 }
