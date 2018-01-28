@@ -60,29 +60,33 @@ class SkillsSection extends Component {
     this.setState({lookDirectionId: lookId})
   }
 
+  openLinkInNewTab (url) {
+    window.open(url,'_blank')
+  }
+
   logoSection () {
     return (
       <div>
-        <img src={LogoReact} className='logo' id='react-logo' />
-        <img src={LogoRedux} className='logo' id='redux-logo' />
-        <img src={LogoES6} className='logo' id='es6-logo' />
-        <img src={LogoHTMLCSSJS} className='logo' id='htmlcssjs-logo' />
-        <img src={LogojQuery} className='logo' id='jquery-logo' />
-        <img src={LogoReactNative} className='logo' id='reactnative-logo' />
-        <img src={LogoNode} className='logo' id='node-logo' />
-        <img src={LogoRoR} className='logo' id='ror-logo' />
-        <img src={LogoPHPMySQL} className='logo' id='phpmysql-logo' />
-        <img src={LogoPostGreSQL} className='logo' id='postgres-logo' />
-        <img src={LogoMongo} className='logo' id='mongo-logo' />
-        <img src={LogoBS} className='logo' id='bs-logo' />
-        <img src={LogoFoundation} className='logo' id='foundation-logo' />
-        <img src={LogoD3} className='logo' id='d3-logo' />
-        <img src={LogoCanvas} className='logo' id='canvas-logo' />
-        <img src={LogoHighCharts} className='logo' id='highcharts-logo' />
-        <img src={LogoSass} className='logo' id='sass-logo' />
-        <img src={LogoWebPack} className='logo' id='webpack-logo' />
-        <img src={LogoGit} className='logo' id='git-logo' />
-        <img src={LogoWordPress} className='logo' id='wordpress-logo' />
+        <img src={LogoReact} className='logo' id='react-logo' onClick={ () => this.openLinkInNewTab('https://reactjs.org/') } />
+        <img src={LogoRedux} className='logo' id='redux-logo' onClick={ () => this.openLinkInNewTab('https://redux.js.org/') } />
+        <img src={LogoES6} className='logo' id='es6-logo' onClick={ () => this.openLinkInNewTab('http://es6-features.org/') } />
+        <img src={LogoHTMLCSSJS} className='logo' id='htmlcssjs-logo' onClick={ () => this.openLinkInNewTab('https://developer.mozilla.org/en-US/docs/Learn/HTML') } />
+        <img src={LogojQuery} className='logo' id='jquery-logo' onClick={ () => this.openLinkInNewTab('https://jquery.com/') } />
+        <img src={LogoReactNative} className='logo' id='reactnative-logo' onClick={ () => this.openLinkInNewTab('https://facebook.github.io/react-native/') } />
+        <img src={LogoNode} className='logo' id='node-logo' onClick={ () => this.openLinkInNewTab('https://nodejs.org/en/') } />
+        <img src={LogoRoR} className='logo' id='ror-logo' onClick={ () => this.openLinkInNewTab('http://rubyonrails.org/') } />
+        <img src={LogoPHPMySQL} className='logo' id='phpmysql-logo' onClick={ () => this.openLinkInNewTab('http://www.php.net/') } />
+        <img src={LogoPostGreSQL} className='logo' id='postgres-logo' onClick={ () => this.openLinkInNewTab('https://www.postgresql.org/') } />
+        <img src={LogoMongo} className='logo' id='mongo-logo' onClick={ () => this.openLinkInNewTab('https://www.mongodb.com/') } />
+        <img src={LogoBS} className='logo' id='bs-logo' onClick={ () => this.openLinkInNewTab('https://getbootstrap.com/') } />
+        <img src={LogoFoundation} className='logo' id='foundation-logo' onClick={ () => this.openLinkInNewTab('https://foundation.zurb.com/') } />
+        <img src={LogoD3} className='logo' id='d3-logo' onClick={ () => this.openLinkInNewTab('https://d3js.org/') } />
+        <img src={LogoCanvas} className='logo' id='canvas-logo' onClick={ () => this.openLinkInNewTab('https://canvasjs.com/') } />
+        <img src={LogoHighCharts} className='logo' id='highcharts-logo' onClick={ () => this.openLinkInNewTab('https://www.highcharts.com/') } />
+        <img src={LogoSass} className='logo' id='sass-logo' onClick={ () => this.openLinkInNewTab('https://sass-lang.com/') } />
+        <img src={LogoWebPack} className='logo' id='webpack-logo' onClick={ () => this.openLinkInNewTab('https://webpack.js.org/') } />
+        <img src={LogoGit} className='logo' id='git-logo' onClick={ () => this.openLinkInNewTab('https://github.com/') } />
+        <img src={LogoWordPress} className='logo' id='wordpress-logo' onClick={ () => this.openLinkInNewTab('https://wordpress.com/') } />
       </div>
     )
   }

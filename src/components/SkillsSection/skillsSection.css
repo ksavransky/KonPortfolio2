@@ -46,6 +46,7 @@
 #skills-section .logo {
   height: 45px;
   position: absolute;
+  cursor: pointer;
 }
 
 @media print, screen and (min-width: 45em) {
@@ -135,7 +136,7 @@
 
 #skills-section #ror-logo {
   left: 30%;
-  top: 28%;
+  top: 30%;
   transform: scale(1.3);
 }
 
