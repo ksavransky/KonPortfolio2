@@ -15,6 +15,12 @@
   width: 100%;
 }
 
+#skills-section .skill-row h1{
+  width: max-content;
+  align-self: baseline;
+  margin-top: 1rem;
+}
+
 #skills-section .skill-row .skill-cell {
   height: 100%;
   width: 100%;

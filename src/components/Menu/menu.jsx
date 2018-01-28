@@ -23,7 +23,7 @@ class Menu extends Component {
             <div>Konstantin</div>
             <div>Savransky</div>
           </div>
-          <div className='menu-item'>Skills</div>
+          <div className='menu-item'>Tech</div>
           <div className='menu-item'>Projects</div>
           <div className='menu-item'>Contact</div>
         </div>
