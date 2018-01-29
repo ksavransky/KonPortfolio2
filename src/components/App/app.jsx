@@ -104,17 +104,18 @@ class App extends Component {
   }
 
   scrollToSection (sectionNumber) {
-    Scroll.scroller.scrollTo(`section-${sectionNumber}`, {
+    Scroll.scroller.scrollTo((`section-${sectionNumber}`), {
       duration: 1500,
       delay: 100,
-      smooth: true
+      smooth: true,
+      offset: -1
     })
   }
 
   render() {
     return (
       <div id='app'>
-        <Menu activeMenuItem={this.state.activeMenuItem} visible={this.state.isMenuVisible} scrollToSection={this.scrollToSection}/>
+        <Menu scroll={Scroll} getDocumentScrollPosition={this.getDocumentScrollPosition} activeMenuItem={this.state.activeMenuItem} visible={this.state.isMenuVisible} scrollToSection={this.scrollToSection}/>
         <Section sectionNumber={1} >
           <TopSection scrollToSection={this.scrollToSection}/>
         </Section>
@@ -122,10 +123,10 @@ class App extends Component {
           <SkillsSection />
         </Section>
         <Section sectionNumber={3} backgroundColor='color1'>
-          Cool
+          Going to be the Projects Section
         </Section>
         <Section sectionNumber={4} backgroundColor='color2'>
-          Dude
+          Going to be the Contact Form Section
         </Section>
       </div>
     )

@@ -12,6 +12,15 @@ class Menu extends Component {
 
   handleMenuItemClick (sectionId) {
     this.props.scrollToSection(sectionId)
+    setTimeout(() => {
+      let currentScrollPos = this.props.getDocumentScrollPosition()
+      if (currentScrollPos > 100) {
+        this.props.scroll.animateScroll.scrollTo((currentScrollPos + 1), {
+          duration: 10,
+          smooth: true
+        })
+      }
+    }, 1600)
   }
 
   render() {
@@ -35,6 +44,8 @@ class Menu extends Component {
 Menu.propTypes = {
   visible: PropTypes.bool,
   scrollToSection: PropTypes.func,
+  getDocumentScrollPosition: PropTypes.func,
+  scroll: PropTypes.any,
   activeMenuItem: PropTypes.number
 }
 
