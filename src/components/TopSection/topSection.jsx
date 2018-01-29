@@ -12,7 +12,7 @@ class TopSection extends Component {
   }
 
   handleArrowClick () {
-    this.props.scrollToSection(2)
+    this.props.scrollToSection(2, 0)
   }
 
   render() {

@@ -103,12 +103,12 @@ class App extends Component {
     }
   }
 
-  scrollToSection (sectionNumber) {
+  scrollToSection (sectionNumber, offset = -1) {
     Scroll.scroller.scrollTo((`section-${sectionNumber}`), {
       duration: 1500,
       delay: 100,
       smooth: true,
-      offset: -1
+      offset: offset
     })
   }
 
