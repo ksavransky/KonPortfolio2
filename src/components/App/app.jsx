@@ -13,7 +13,6 @@ class App extends Component {
     this.scrollToSection = this.scrollToSection.bind(this)
     this.documentScrollListener = this.documentScrollListener.bind(this)
     this.getDocumentScrollPosition = this.getDocumentScrollPosition.bind(this)
-    this.setDocumentScrollPosition = this.setDocumentScrollPosition.bind(this)
 
     this.state = {
       isMenuVisible: true,
@@ -22,10 +21,11 @@ class App extends Component {
     }
 
     this.documentScrollTop = 0
-    this.sectionPositionTops = {
+    this.sectionPositionMiddles = {
       1: 0,
       2: 0,
-      3: 0
+      3: 0,
+      4: 0
     }
   }
 
@@ -42,13 +42,32 @@ class App extends Component {
   }
 
   setSectionPositionTops () {
-    // set the position tops Y coord of each section
+    let sections = document.getElementsByClassName('section-content')
+    if (sections.length && sections.length > 0) {
+      for (let i = 0; i < sections.length; i++) {
+        this.sectionPositionMiddles[i + 1] = (sections[i].offsetTop + (sections[i].clientHeight / 2))
+      }
+    }
   }
 
   setActiveMenuItem () {
-    // do a calculation based on scroll position and this.sectionPositionTops to figure out active menu item
-    // do a setstate on activeMenuItem if the result is different than the prior result
-    // pass set state var to menu jsx
+    if  (this.documentScrollTop < this.sectionPositionMiddles[1]) {
+      if (this.state.activeMenuItem !== 1) {
+        this.setState({activeMenuItem: 1})
+      }
+    } else if (this.documentScrollTop < this.sectionPositionMiddles[2]) {
+      if (this.state.activeMenuItem !== 2) {
+        this.setState({activeMenuItem: 2})
+      }
+    } else if (this.documentScrollTop < this.sectionPositionMiddles[3]) {
+      if (this.state.activeMenuItem !== 3) {
+        this.setState({activeMenuItem: 3})
+      }
+    } else {
+      if (this.state.activeMenuItem !== 4) {
+        this.setState({activeMenuItem: 4})
+      }
+    }
   }
 
   setIsSafari () {
@@ -65,18 +84,10 @@ class App extends Component {
     return document.documentElement.scrollTop
   }
 
-  setDocumentScrollPosition (pos) {
-    if (this.state.isSafari) {
-      document.body.scrollTop = pos
-    } else {
-      document.documentElement.scrollTop = pos
-    }
-  }
-
   documentScrollListener () {
     this.menuVisibilityControl()
-    this.setActiveMenuItem()
     this.documentScrollTop = this.getDocumentScrollPosition()
+    this.setActiveMenuItem()
   }
 
   menuVisibilityControl () {
@@ -110,10 +121,10 @@ class App extends Component {
       <Section id='skills-section-container' sectionNumber={2} backgroundColor='lightgray' >
           <SkillsSection />
         </Section>
-        <Section backgroundColor='color1'>
+        <Section sectionNumber={3} backgroundColor='color1'>
           Cool
         </Section>
-        <Section backgroundColor='color2'>
+        <Section sectionNumber={4} backgroundColor='color2'>
           Dude
         </Section>
       </div>

@@ -43,14 +43,14 @@
   border-radius: 65px;
 }
 
-#skills-section .logo {
+#skills-section img {
   height: 45px;
   position: absolute;
   cursor: pointer;
 }
 
 @media print, screen and (min-width: 45em) {
-  #skills-section .logo {
+  #skills-section img {
     height: 55px;
   }
 }
