@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import DropDownLogo from '../../images/dropdownmenu.png'
+import GitHubLogo from '../../images/github.png'
+import LinkedInLogo from '../../images/linkedin.png'
 import { isEqual } from 'lodash'
 import './menu.css'
 
@@ -117,6 +119,12 @@ class Menu extends Component {
       <div id='menu' className={isMenuVisible}>
         {this.renderLargeMenu()}
         {this.renderSmallMenu(isMenuVisible)}
+        <a href='https://www.linkedin.com/in/ksavransky/' target='_blank'>
+          <img src={LinkedInLogo} id='linkedin-logo' className='logo-link' />
+        </a>
+        <a href='https://github.com/ksavransky' target='_blank'>
+          <img src={GitHubLogo} id='github-logo' className='logo-link' />
+        </a>
       </div>
     )
   }

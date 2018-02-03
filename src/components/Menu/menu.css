@@ -13,6 +13,33 @@
   z-index: 99999;
 }
 
+#menu #linkedin-logo {
+  position: absolute;
+  top: 27px;
+  right: 55px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#menu #github-logo {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  height: 35px;
+  cursor: pointer;
+}
+
+@media(min-width: 40em) {
+  #menu #linkedin-logo {
+    right: 90px;
+    height: 25px;
+  }
+  #menu #github-logo {
+    right: 30px;
+    height: 40px;
+  }
+}
+
 #menu.visible {
   top: 0;
 }
@@ -118,7 +145,7 @@
    border-radius: 0px;
 }
 
-#drop-down-menu .options-container .menu-item.active {
+#drop-down-menu .options-container .menu-item.active,#drop-down-menu .options-container .menu-item:hover {
    background: #4a4a4a;
 }
 
