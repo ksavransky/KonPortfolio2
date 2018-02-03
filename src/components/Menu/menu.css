@@ -96,10 +96,10 @@
 
 #drop-down-menu .options-container {
   flex-direction: column;
-  transition: .5s all ease-out;
+  transition: .2s all ease-out;
   width: 250px;
   background: black;
-  position: fixed;
+  position: absolute;
 }
 
 #drop-down-menu .options-container.visible {
