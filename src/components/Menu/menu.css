@@ -100,15 +100,15 @@
   width: 250px;
   background: black;
   position: absolute;
-}
-
-#drop-down-menu .options-container.visible {
-  flex-direction: column;
   top: 70px;
 }
 
-#drop-down-menu .options-container.hidden {
-  top: -200px;
+#drop-down-menu .options-container.visible.drop-down-open {
+  display: flex;
+}
+
+#drop-down-menu .options-container.hidden, .options-container.drop-down-close {
+  display: none !important;
 }
 
 #drop-down-menu .options-container .menu-item {

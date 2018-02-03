@@ -8,11 +8,33 @@ class Menu extends Component {
   constructor(props){
     super(props)
 
+    this.state = {
+      isDropDownOpen: false
+    }
+
     this.handleMenuItemClick = this.handleMenuItemClick.bind(this)
     this.renderLargeMenu = this.renderLargeMenu.bind(this)
     this.renderSmallMenu = this.renderSmallMenu.bind(this)
     this.renderDropDownMenu = this.renderDropDownMenu.bind(this)
     this.renderOptions = this.renderOptions.bind(this)
+    this.handleDropDownLogoClick = this.handleDropDownLogoClick.bind(this)
+    this.handleBodyClick = this.handleBodyClick.bind(this)
+  }
+
+  componentDidMount () {
+    document.body.addEventListener('click', this.handleBodyClick)
+  }
+
+  componentWillUnmount () {
+    document.body.removeEventListener('click', this.handleBodyClick)
+  }
+
+  handleBodyClick (event) {
+    if (event.target.className !== 'menu-item' && event.target.id !== 'drop-down-logo') {
+      this.setState({
+        isDropDownOpen: false
+      })
+    }
   }
 
   handleMenuItemClick (sectionId) {
@@ -28,9 +50,15 @@ class Menu extends Component {
     }, 1600)
   }
 
+  handleDropDownLogoClick () {
+    this.setState({
+      isDropDownOpen: !this.state.isDropDownOpen
+    })
+  }
+
   renderOptions (isMenuVisible) {
     return (
-      <div className={'options-container ' + isMenuVisible}>
+      <div className={'options-container ' + isMenuVisible + ' ' + (this.state.isDropDownOpen ? 'drop-down-open' : 'drop-down-close')}>
         <div className={'menu-item' + (this.props.activeMenuItem === 2 ? ' active' : '')} onClick={() => { this.handleMenuItemClick(2)}}>Tech</div>
         <div className={'menu-item' + (this.props.activeMenuItem === 3 ? ' active' : '')} onClick={() => { this.handleMenuItemClick(3)}}>Projects</div>
         <div className={'menu-item' + (this.props.activeMenuItem === 4 ? ' active' : '')} onClick={() => { this.handleMenuItemClick(4)}}>Contact</div>
@@ -65,7 +93,7 @@ class Menu extends Component {
   renderDropDownMenu (isMenuVisible) {
     return (
       <div id='drop-down-menu' >
-        <img src={DropDownLogo} id='drop-down-logo' />
+        <img src={DropDownLogo} id='drop-down-logo' onClick={() => { this.handleDropDownLogoClick()}}/>
         <div id='drop-down-logo-background'></div>
         {this.renderOptions(isMenuVisible)}
       </div>
