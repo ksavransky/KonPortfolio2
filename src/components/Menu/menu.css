@@ -107,7 +107,7 @@
   display: flex;
 }
 
-#drop-down-menu .options-container.hidden, .options-container.drop-down-close {
+#drop-down-menu .options-container.hidden, #drop-down-menu .options-container.drop-down-close {
   display: none !important;
 }
 
