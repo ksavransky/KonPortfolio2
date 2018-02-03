@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import DropDownLogo from '../../images/dropdownmenu.png'
+import { isEqual } from 'lodash'
 import './menu.css'
 
 
@@ -9,7 +10,7 @@ class Menu extends Component {
     super(props)
 
     this.state = {
-      isDropDownOpen: false
+      isDropDownOpen: this.props.visible
     }
 
     this.handleMenuItemClick = this.handleMenuItemClick.bind(this)
@@ -27,6 +28,16 @@ class Menu extends Component {
 
   componentWillUnmount () {
     document.body.removeEventListener('click', this.handleBodyClick)
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (!isEqual(nextProps, this.props)) {
+      if (!nextProps.visible) {
+        this.setState({
+          isDropDownOpen: false
+        })
+      }
+    }
   }
 
   handleBodyClick (event) {
