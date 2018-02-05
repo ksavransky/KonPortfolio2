@@ -3,6 +3,7 @@ import Menu from '../Menu/menu.jsx'
 import Section from '../Section/section.jsx'
 import TopSection from '../TopSection/topSection.jsx'
 import SkillsSection from '../SkillsSection/skillsSection.jsx'
+import ProjectsSection from '../ProjectsSection/projectsSection.jsx'
 import Scroll from 'react-scroll'
 import './app.css'
 
@@ -122,8 +123,8 @@ class App extends Component {
       <Section id='skills-section-container' sectionNumber={2} backgroundColor='lightgray' >
           <SkillsSection />
         </Section>
-        <Section sectionNumber={3} backgroundColor='color1'>
-          Going to be the Projects Section
+        <Section sectionNumber={3} backgroundColor='color1 more-height'>
+          <ProjectsSection />
         </Section>
         <Section sectionNumber={4} backgroundColor='color2'>
           Going to be the Contact Form Section
