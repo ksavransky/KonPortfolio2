@@ -12,6 +12,7 @@ class ProjectsSection extends Component {
   render() {
     return (
       <div id='projects-section'>
+        <h2 id='title'>Some of My Solo Projects</h2>
         <Masonry
             className='masonry-container'
             options={{

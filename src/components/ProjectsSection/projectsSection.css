@@ -1,17 +1,32 @@
-#projects-section {
-
+#projects-section h2{
+  width: max-content;
+  margin: 1.5rem auto;
+  font-size: 2rem;
+  color: #3e3e3e;
 }
 
-.masonry-container {
+@media print, screen and (min-width: 45em) {
+  #skills-section h2{
+    font-size: 2.5rem;
+  }
+}
+
+#projects-section .masonry-container {
   display: flex;
   justify-content: center;
   margin: auto;
 }
 
-.project-card {
-  height: 300px;
-  width: 300px;
+#projects-section .project-card {
+  height: 400px;
+  width: 350px;
   background: red;
-  margin: 50px;
   border: 5px solid black;
+  margin-bottom: 50px;
+}
+
+@media print, screen and (min-width: 45em) {
+  #projects-section .project-card {
+    margin: 0px 100px 100px 100px;
+  }
 }
