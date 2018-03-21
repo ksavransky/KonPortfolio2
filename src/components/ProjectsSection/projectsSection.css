@@ -20,8 +20,9 @@
 #projects-section .project-card {
   height: 400px;
   width: 350px;
-  background: red;
-  border: 5px solid black;
+  background: transparent;
+  border: 1px solid #3e3e3e;
+  border-radius: 5px;
   margin-bottom: 50px;
 }
 
