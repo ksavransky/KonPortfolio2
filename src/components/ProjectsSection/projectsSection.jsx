@@ -30,16 +30,16 @@ class ProjectsSection extends Component {
                 <h5>React/Redux, Ruby on Rails, Postgres</h5>
               </div>
               <div className='project-card'>
-                <h4>Markov Tweets</h4>
-                <img src={MarkovPhoto} />
-                <h5>React/Redux, NodeJS, Twitter API</h5>
+                <h4>Super Pong</h4>
+                <img src={PongPhoto} />
+                <h5>Javascript, Canvas</h5>
               </div>
             </div>
             <div>
               <div className='project-card'>
-                <h4>Super Pong</h4>
-                <img src={PongPhoto} />
-                <h5>Javascript, Canvas</h5>
+                <h4>Markov Tweets</h4>
+                <img src={MarkovPhoto} />
+                <h5>React/Redux, NodeJS, Twitter API</h5>
               </div>
               <div className='project-card'>
                 <h4>AlgoTracker</h4>
