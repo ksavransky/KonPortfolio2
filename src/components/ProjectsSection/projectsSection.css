@@ -1,6 +1,6 @@
 #projects-section h2{
   width: max-content;
-  margin: 1.5rem auto;
+  margin: 1.5rem auto 45px;
   font-size: 2rem;
   color: #3e3e3e;
 }
@@ -39,7 +39,7 @@
 #projects-section .project-card h6 {
   display: flex;
   position: absolute;
-  bottom: 30px;
+  bottom: 25px;
 }
 
 #projects-section .project-card img {
