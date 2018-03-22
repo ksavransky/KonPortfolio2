@@ -27,24 +27,24 @@ class ProjectsSection extends Component {
               <div className='project-card'>
                 <h4>Hipstergram</h4>
                 <img src={HipstergramPhoto} />
-                <h5>React/Redux, Ruby on Rails, Postgres</h5>
+                <h6>React/Redux, Ruby on Rails, Postgres</h6>
               </div>
               <div className='project-card'>
                 <h4>Super Pong</h4>
                 <img src={PongPhoto} />
-                <h5>Javascript, Canvas</h5>
+                <h6>Javascript, Canvas</h6>
               </div>
             </div>
             <div>
               <div className='project-card'>
                 <h4>Markov Tweets</h4>
                 <img src={MarkovPhoto} />
-                <h5>React/Redux, NodeJS, Twitter API</h5>
+                <h6>React/Redux, NodeJS, Twitter API</h6>
               </div>
               <div className='project-card'>
                 <h4>AlgoTracker</h4>
                 <img src={AlgoPhoto} />
-                <h5>Javascript, D3</h5>
+                <h6>Javascript, D3</h6>
               </div>
             </div>
         </Masonry>
