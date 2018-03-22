@@ -24,24 +24,24 @@ class ProjectsSection extends Component {
                 fitWidth: true
             }}>
             <div>
-              <div className='project-card'>
+              <div className='project-card hipstergram'>
                 <h4>Hipstergram</h4>
                 <img src={HipstergramPhoto} />
                 <h6>React/Redux, Ruby on Rails, Postgres</h6>
               </div>
-              <div className='project-card'>
+              <div className='project-card pong'>
                 <h4>Super Pong</h4>
                 <img src={PongPhoto} />
                 <h6>Javascript, Canvas</h6>
               </div>
             </div>
             <div>
-              <div className='project-card'>
+              <div className='project-card markov'>
                 <h4>Markov Tweets</h4>
                 <img src={MarkovPhoto} />
                 <h6>React/Redux, NodeJS, Twitter API</h6>
               </div>
-              <div className='project-card'>
+              <div className='project-card algo'>
                 <h4>AlgoTracker</h4>
                 <img src={AlgoPhoto} />
                 <h6>Javascript, D3</h6>

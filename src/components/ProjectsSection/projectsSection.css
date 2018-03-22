@@ -24,12 +24,29 @@
   height: 350px;
   width: 350px;
   background: transparent;
-  border: 1px solid #3e3e3e;
+  border: 1px solid #eaeaea;
   border-radius: 5px;
   margin-bottom: 50px;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
+  color: white;
+  background: #727d8a;
 }
+
+/* #projects-section .project-card.hipstergram {
+  background: #454f63;
+}
+#projects-section .project-card.pong {
+  background: #196163;
+}
+#projects-section .project-card.markov {
+  background: #4681a0;
+}
+#projects-section .project-card.algo {
+  background: #4263a7;
+} */
+
 
 #projects-section .project-card h4 {
   display: flex;
