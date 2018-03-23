@@ -31,23 +31,8 @@
   position: relative;
   cursor: pointer;
   color: white;
-  /* background: #727d8a; */
   background: linear-gradient(90deg, #727d8a, #252323);
 }
-
-/* #projects-section .project-card.hipstergram {
-  background: #454f63;
-}
-#projects-section .project-card.pong {
-  background: #196163;
-}
-#projects-section .project-card.markov {
-  background: #4681a0;
-}
-#projects-section .project-card.algo {
-  background: #4263a7;
-} */
-
 
 #projects-section .project-card h4 {
   display: flex;
@@ -58,10 +43,6 @@
   display: flex;
   position: absolute;
   bottom: 25px;
-}
-
-#projects-section .project-card img {
-  /* border-radius: 5px; */
 }
 
 @media print, screen and (min-width: 45em) {
