@@ -31,7 +31,8 @@
   position: relative;
   cursor: pointer;
   color: white;
-  background: #727d8a;
+  /* background: #727d8a; */
+  background: linear-gradient(90deg, #727d8a, #252323);
 }
 
 /* #projects-section .project-card.hipstergram {
