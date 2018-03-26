@@ -13,6 +13,7 @@ class ProjectsSection extends Component {
     super(props)
     this.state = {
       open: false,
+      project: null
     }
   }
 
@@ -30,7 +31,7 @@ class ProjectsSection extends Component {
       <div id='projects-section'>
         <h2 id='title'>Some of My Solo Projects</h2>
         <Modal open={open} onClose={this.onCloseModal} little>
-          <h2>Simple centered modal</h2>
+          <h2>{this.state.project}</h2>
         </Modal>
         <Masonry
             className='masonry-container'
@@ -39,7 +40,11 @@ class ProjectsSection extends Component {
                 fitWidth: true
             }}>
             <div>
-              <div onClick={this.onOpenModal} className='project-card hipstergram'>
+              <div onClick={ () => {
+                this.setState({ project: 'hipstergram' }, () => {
+                  this.onOpenModal()
+                })}}
+                className='project-card hipstergram'>
                 <h4>Hipstergram</h4>
                 <img src={HipstergramPhoto} />
                 <h6>React/Redux, Ruby on Rails, Postgres</h6>
