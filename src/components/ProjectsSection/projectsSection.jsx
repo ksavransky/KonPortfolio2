@@ -11,10 +11,10 @@ import './projectsSection.css'
 const projectData = {
   hipstergram: {
     title: 'Hipstergram',
-    about: 'About Hipstergram',
-    tech: 'Tech about Hipstergram',
-    liveURL: 'www.google.com',
-    gitURL: 'www.google.com'
+    about: 'Hipstergram is a photo sharing web application inspired by Instagram, but tailored to Hipster sensibilities. It allows users to sign up, post photos, and search for and follow other users.',
+    tech: 'Hipstergram was built using React, Redux, Ruby on Rails, Postgres, Webpack, ES6, and Flexbox CSS',
+    liveURL: 'https://thehipstergram.herokuapp.com',
+    gitURL: 'https://github.com/ksavransky/Hipstergram'
   },
   pong: {
     title: 'Super Pong',
@@ -62,7 +62,13 @@ class ProjectsSection extends Component {
       <div id='projects-section'>
         <h2 id='title'>Some of My Solo Projects</h2>
         <Modal open={open} onClose={this.onCloseModal} little>
-          <h2>{projectData[this.state.project].title}</h2>
+          <div className='modal-content'>
+            <h2>{projectData[this.state.project].title}</h2>
+            <h3>{projectData[this.state.project].about}</h3>
+            <h3>{projectData[this.state.project].tech}</h3>
+            <a href={projectData[this.state.project].liveURL} target='_blank'>Live</a>
+            <a href={projectData[this.state.project].gitURL} target='_blank'>Github</a>
+          </div>
         </Modal>
         <Masonry
             className='masonry-container'
