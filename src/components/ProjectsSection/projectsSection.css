@@ -1,8 +1,9 @@
 #projects-section h2{
   width: max-content;
-  margin: 1.5rem auto 45px;
   font-size: 2rem;
   color: #3e3e3e;
+  margin: 0rem auto 45px;
+  padding-top: 1.5rem;
 }
 
 @media print, screen and (min-width: 45em) {
@@ -31,7 +32,7 @@
   position: relative;
   cursor: pointer;
   color: white;
-  background: linear-gradient(90deg, #727d8a, #252323);
+  background: black;
 }
 
 #projects-section .project-card h4 {
@@ -43,6 +44,11 @@
   display: flex;
   position: absolute;
   bottom: 25px;
+}
+
+#projects-section .project-card img {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 @media print, screen and (min-width: 45em) {
