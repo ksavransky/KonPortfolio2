@@ -51,6 +51,9 @@
   border-bottom: 1px solid white;
 }
 
+.video-react-control-bar {
+  display: none !important;
+}
 .modal-content {
   background: red;
 }

@@ -52,7 +52,11 @@ class ProjectsSection extends Component {
   }
 
   onOpenModal = () => {
-    this.setState({ open: true })
+    this.setState({
+      open: true
+    }, () => {
+      this.refs.player.play()
+    })
   }
 
   onCloseModal = () => {
@@ -71,10 +75,12 @@ class ProjectsSection extends Component {
             <h3>{projectData[this.state.project].tech}</h3>
             <a href={projectData[this.state.project].liveURL} target='_blank'>Live</a>
             <a href={projectData[this.state.project].gitURL} target='_blank'>Github</a>
+            {/* https://video-react.js.org/components/player/ */}
             <Player
-              playsInline
-              poster={HipstergramPhoto}
+              ref="player"
               src={HipstergramVideo}
+              loop
+              autoplay
             />
           </div>
         </Modal>
