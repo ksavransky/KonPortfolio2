@@ -6,6 +6,9 @@ import HipstergramPhoto from '../../images/projects/hipstergram.png'
 import MarkovPhoto from '../../images/projects/markov.png'
 import PongPhoto from '../../images/projects/pong.png'
 import AlgoPhoto from '../../images/projects/algotracker.png'
+import HipstergramVideo from '../../video/hipstergram.webm'
+import { Player } from 'video-react'
+import '../../../node_modules/video-react/dist/video-react.css'
 import './projectsSection.css'
 
 const projectData = {
@@ -68,6 +71,11 @@ class ProjectsSection extends Component {
             <h3>{projectData[this.state.project].tech}</h3>
             <a href={projectData[this.state.project].liveURL} target='_blank'>Live</a>
             <a href={projectData[this.state.project].gitURL} target='_blank'>Github</a>
+            <Player
+              playsInline
+              poster={HipstergramPhoto}
+              src={HipstergramVideo}
+            />
           </div>
         </Modal>
         <Masonry
