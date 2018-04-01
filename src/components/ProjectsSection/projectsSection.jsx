@@ -17,7 +17,8 @@ const projectData = {
     about: 'Hipstergram is a photo sharing web application inspired by Instagram, but tailored to Hipster sensibilities. It allows users to sign up, post photos, and search for and follow other users.',
     tech: 'Hipstergram was built using React, Redux, Ruby on Rails, Postgres, Webpack, ES6, and Flexbox CSS',
     liveURL: 'https://thehipstergram.herokuapp.com',
-    gitURL: 'https://github.com/ksavransky/Hipstergram'
+    gitURL: 'https://github.com/ksavransky/Hipstergram',
+    video: HipstergramVideo
   },
   pong: {
     title: 'Super Pong',
@@ -75,10 +76,9 @@ class ProjectsSection extends Component {
             <h3>{projectData[this.state.project].tech}</h3>
             <a href={projectData[this.state.project].liveURL} target='_blank'>Live</a>
             <a href={projectData[this.state.project].gitURL} target='_blank'>Github</a>
-            {/* https://video-react.js.org/components/player/ */}
             <Player
               ref="player"
-              src={HipstergramVideo}
+              src={projectData[this.state.project].video} 
               loop
               autoplay
             />

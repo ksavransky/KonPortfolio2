@@ -54,6 +54,10 @@
 .video-react-control-bar {
   display: none !important;
 }
+.video-react {
+  outline: none;
+  pointer-events: none;
+}
 .modal-content {
   background: red;
 }
