@@ -46,7 +46,7 @@ const projectData = {
   markov: {
     title: 'Markov Chain Tweets',
     about: 'Markov Chain Tweets is a web application that allows you to search for a twitter user and see their latest 10 tweets! Then, using a Markov Chain algorithm, you can generate new tweets based on the text of the real tweets. You can also re-order the last ten tweets based on a customizable Markov Chain controlled by your inputs.',
-    tech: 'Markov Chain Tweets was built using React/ES6, NodeJS, the Twitter API, Webpack, Foundation, and Flexbox CSS.',
+    tech: 'Markov Chain Tweets was built using React/ES6, Redux, NodeJS, the Twitter API, Webpack, Foundation, and Flexbox CSS.',
     liveURL: 'https://markovtweets.herokuapp.com/',
     gitURL: 'https://github.com/ksavransky/MarkovTweets',
     video: MarkovVideo,

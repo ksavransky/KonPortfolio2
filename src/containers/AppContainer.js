@@ -6,7 +6,7 @@ import App from '../components/App/app'
 
 function mapStateToProps(state) {
   return {
-    emptyState: state
+    sendEmailResults: state.main.searchResults
   }
 }
 

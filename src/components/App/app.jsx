@@ -4,6 +4,7 @@ import Section from '../Section/section.jsx'
 import TopSection from '../TopSection/topSection.jsx'
 import SkillsSection from '../SkillsSection/skillsSection.jsx'
 import ProjectsSection from '../ProjectsSection/projectsSection.jsx'
+import ContactSection from '../ContactSection/contactSection.jsx'
 import Scroll from 'react-scroll'
 import './app.css'
 
@@ -127,7 +128,7 @@ class App extends Component {
           <ProjectsSection isSafari={this.state.isSafari}/>
         </Section>
         <Section sectionNumber={4} backgroundColor='color2'>
-          Going to be the Contact Form Section
+          <ContactSection actions={this.props.actions}/>
         </Section>
       </div>
     )
