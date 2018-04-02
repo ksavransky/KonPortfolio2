@@ -81,7 +81,7 @@
   display: none !important;
 }
 
-.modal-content .video-react {
+.modal-content .video-react, .modal-content img {
   outline: none;
   pointer-events: none;
   margin-bottom: 25px;

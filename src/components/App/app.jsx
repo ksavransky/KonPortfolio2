@@ -124,7 +124,7 @@ class App extends Component {
           <SkillsSection />
         </Section>
         <Section sectionNumber={3} backgroundColor='color1 more-height'>
-          <ProjectsSection />
+          <ProjectsSection isSafari={this.state.isSafari}/>
         </Section>
         <Section sectionNumber={4} backgroundColor='color2'>
           Going to be the Contact Form Section

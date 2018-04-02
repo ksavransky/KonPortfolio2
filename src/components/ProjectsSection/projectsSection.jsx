@@ -21,7 +21,8 @@ const projectData = {
     tech: 'Hipstergram was built using React, Redux, Ruby on Rails, Postgres, Webpack, ES6, and Flexbox CSS.',
     liveURL: 'https://thehipstergram.herokuapp.com',
     gitURL: 'https://github.com/ksavransky/Hipstergram',
-    video: HipstergramVideo
+    video: HipstergramVideo,
+    photo: HipstergramPhoto
   },
   pong: {
     title: 'Super Pong',
@@ -29,7 +30,8 @@ const projectData = {
     tech: 'Super Pong was developed using Javascript, Canvas, and HTML/CSS',
     liveURL: 'http://preacher-wolf-83250.bitballoon.com/',
     gitURL: 'https://github.com/ksavransky/SuperPong',
-    video: PongVideo
+    video: PongVideo,
+    photo: PongPhoto
   },
   algoTracker: {
     title: 'AlgoTracker',
@@ -37,7 +39,9 @@ const projectData = {
     tech: 'AlgoTracker was developed using Javascript, D3, and HTML/CSS.',
     liveURL: 'http://jockey-enlistment-68560.bitballoon.com/',
     gitURL: 'https://github.com/ksavransky/AlgoTracker',
-    video: AlgoVideo
+    video: AlgoVideo,
+    photo: AlgoPhoto
+
   },
   markov: {
     title: 'Markov Chain Tweets',
@@ -45,7 +49,8 @@ const projectData = {
     tech: 'Markov Chain Tweets was built using React/ES6, NodeJS, the Twitter API, Webpack, Foundation, and Flexbox CSS.',
     liveURL: 'https://markovtweets.herokuapp.com/',
     gitURL: 'https://github.com/ksavransky/MarkovTweets',
-    video: MarkovVideo
+    video: MarkovVideo,
+    photo: MarkovPhoto
   }
 }
 
@@ -62,7 +67,9 @@ class ProjectsSection extends Component {
     this.setState({
       open: true
     }, () => {
-      this.refs.player.play()
+      if (!this.props.isSafari) {
+        this.refs.player.play()
+      }
     })
   }
 
@@ -72,6 +79,11 @@ class ProjectsSection extends Component {
 
   render() {
     const { open } = this.state
+    let videoOrPhoto = <Player ref="player" src={projectData[this.state.project].video} loop autoplay />
+    if (this.props.isSafari) {
+      videoOrPhoto = <img src={projectData[this.state.project].photo} />
+    }
+
     return (
       <div id='projects-section'>
         <h2 id='title'>Some of My Solo Projects</h2>
@@ -85,12 +97,7 @@ class ProjectsSection extends Component {
             <h2 className='title'>{projectData[this.state.project].title}</h2>
             <div className='modal-body-top'>
               <div className='video-container'>
-                <Player
-                  ref="player"
-                  src={projectData[this.state.project].video}
-                  loop
-                  autoplay
-                  />
+                {videoOrPhoto}
               </div>
               <div className='modal-links'>
                 <a href={projectData[this.state.project].liveURL} target='_blank'><h4>Live</h4></a>
@@ -158,5 +165,10 @@ class ProjectsSection extends Component {
     )
   }
 }
+
+ProjectsSection.propTypes = {
+  isSafari: PropTypes.bool
+}
+
 
 export default ProjectsSection
