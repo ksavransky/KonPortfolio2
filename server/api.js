@@ -1,86 +1,50 @@
 const api = module.exports = require('express').Router()
 
-// var mailer = require('node-mailer');
-
 'use strict';
 const nodemailer = require('nodemailer');
 
 function sendEmail(req, res){
   console.log('in sendEmail')
-  // console.log(req.query.emailBody)
-  // console.log(req.query.text)
-  // var success = function (phrase) {
-  //   // console.log('Data [%s]', data);
-  //   res.status(200).send(phrase);
-  // };
+  var success = function (data) {
+    // console.log('Data [%s]', data);
+    res.status(200).send(data);
+  };
 
-  // var chain = new MarkovChain(req.query.text);
+  var error = function (data) {
+    // console.log('Data [%s]', data);
+    res.status(400).send(data);
+  };
 
-  // var mail = new nodemailer.Mail({
-  // 	from: 'noreply@domain.com',
-  // 	to: 'ksavransky@gmail.com',
-  // 	subject: 'test!!!!',
-  // 	body: 'My body',
-  // 	callback: function(err, data){
-  //     console.log(err);
-  //     console.log(data);
-  //     if (data) {
-  //       res.status(200).send(data)
-  //     } else if (err) {
-  //       res.status(400).send(err)
-  //     }
-  // 	}
-  // });
-  //
-  // mail()
-
-  //
-  // console.log('message')
-  // console.log(message)
-  // success(message);
-
-
-  // Generate test SMTP service account from ethereal.email
-  // Only needed if you don't have a real mail account for testing
   nodemailer.createTestAccount((err, account) => {
-      // create reusable transporter object using the default SMTP transport
       let transporter = nodemailer.createTransport({
-          host: 'smtp.ethereal.email',
-          port: 587,
-          secure: false, // true for 465, false for other ports
-          auth: {
-              user: account.user, // generated ethereal user
-              pass: account.pass // generated ethereal password
-          }
+        service: 'yahoo',
+        auth: {
+          user: 'ksavransky@yahoo.com',
+          pass: 'Y3321delilah'
+        }
       });
 
       // setup email data with unicode symbols
       let mailOptions = {
-          from: '"Fred Foo 👻" <foo@example.com>', // sender address
+          from: '"My Website" <ksavransky@yahoo.com>', // sender address
           to: 'ksavransky@gmail.com', // list of receivers
-          subject: 'Hello ✔', // Subject line
-          text: 'Hello world?', // plain text body
-          html: '<b>Hello world?</b>' // html body
+          subject: 'Contact From My Website', // Subject line
+          text:  req.query.emailBody, // plain text body
+          html: `<b>${req.query.emailBody}</b>` // html body
       };
 
       // send mail with defined transport object
       transporter.sendMail(mailOptions, (error, info) => {
           if (error) {
-              return console.log(error);
+            error('Message sent: ' + info.messageId)
+            return console.log(error);
           }
           console.log('Message sent: %s', info.messageId);
-          // Preview only available when sending through an Ethereal account
-          console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
 
-          // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-          // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+          success('Message sent: ' + info.messageId)
       });
   });
 }
-
-// function testFunction () {
-//   console.log('in testFunction')
-// }
 
 api
   .get('/send-email', sendEmail)
