@@ -77,7 +77,7 @@ class ProjectsSection extends Component {
           >
           <div className='modal-content'>
             <h2 className='title'>{projectData[this.state.project].title}</h2>
-            <div className='modal-body'>
+            <div className='modal-body-top'>
               <div className='video-container'>
                 <Player
                   ref="player"
@@ -85,13 +85,15 @@ class ProjectsSection extends Component {
                   loop
                   autoplay
                   />
-                  <h4>{projectData[this.state.project].tech}</h4>
               </div>
-                <div className='information-container'>
-                  <a href={projectData[this.state.project].liveURL} target='_blank'><h4>Live</h4></a>
-                  <a href={projectData[this.state.project].gitURL} target='_blank'><h4>Github</h4></a>
-                  <h4>{projectData[this.state.project].about}</h4>
-                </div>
+              <div className='modal-links'>
+                <a href={projectData[this.state.project].liveURL} target='_blank'><h4>Live</h4></a>
+                <a href={projectData[this.state.project].gitURL} target='_blank'><h4>Github</h4></a>
+              </div>
+            </div>
+            <div className='modal-body-bottom'>
+              <h4>{projectData[this.state.project].about}</h4>
+              <h4>{projectData[this.state.project].tech}</h4>
             </div>
           </div>
         </Modal>
