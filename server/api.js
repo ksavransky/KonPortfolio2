@@ -19,14 +19,14 @@ function sendEmail(req, res){
       let transporter = nodemailer.createTransport({
         service: 'yahoo',
         auth: {
-          user: 'ksavransky@yahoo.com',
-          pass: 'Y3321delilah'
+          user: 'kswebsite@yahoo.com',
+          pass: 'kon0jem0'
         }
       });
 
       // setup email data with unicode symbols
       let mailOptions = {
-          from: '"My Website" <ksavransky@yahoo.com>', // sender address
+          from: '"Kons Website" <kswebsite@yahoo.com>', // sender address
           to: 'ksavransky@gmail.com', // list of receivers
           subject: 'Contact From My Website', // Subject line
           text:  req.query.emailBody, // plain text body
