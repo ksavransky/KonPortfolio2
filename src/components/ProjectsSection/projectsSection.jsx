@@ -15,7 +15,7 @@ const projectData = {
   hipstergram: {
     title: 'Hipstergram',
     about: 'Hipstergram is a photo sharing web application inspired by Instagram, but tailored to Hipster sensibilities. It allows users to sign up, post photos, and search for and follow other users.',
-    tech: 'Hipstergram was built using React, Redux, Ruby on Rails, Postgres, Webpack, ES6, and Flexbox CSS',
+    tech: 'Hipstergram was built using React, Redux, Ruby on Rails, Postgres, Webpack, ES6, and Flexbox CSS.',
     liveURL: 'https://thehipstergram.herokuapp.com',
     gitURL: 'https://github.com/ksavransky/Hipstergram',
     video: HipstergramVideo
@@ -69,19 +69,30 @@ class ProjectsSection extends Component {
     return (
       <div id='projects-section'>
         <h2 id='title'>Some of My Solo Projects</h2>
-        <Modal open={open} onClose={this.onCloseModal} little>
+        <Modal
+          open={open}
+          onClose={this.onCloseModal}
+          styles={{modal: {height: 'calc(100vh - 100px)', overflow: 'scroll'}}}
+          little
+          >
           <div className='modal-content'>
-            <h2>{projectData[this.state.project].title}</h2>
-            <h3>{projectData[this.state.project].about}</h3>
-            <h3>{projectData[this.state.project].tech}</h3>
-            <a href={projectData[this.state.project].liveURL} target='_blank'>Live</a>
-            <a href={projectData[this.state.project].gitURL} target='_blank'>Github</a>
-            <Player
-              ref="player"
-              src={projectData[this.state.project].video} 
-              loop
-              autoplay
-            />
+            <h2 className='title'>{projectData[this.state.project].title}</h2>
+            <div className='modal-body'>
+              <div className='video-container'>
+                <Player
+                  ref="player"
+                  src={projectData[this.state.project].video}
+                  loop
+                  autoplay
+                  />
+                  <h4>{projectData[this.state.project].tech}</h4>
+              </div>
+                <div className='information-container'>
+                  <a href={projectData[this.state.project].liveURL} target='_blank'><h4>Live</h4></a>
+                  <a href={projectData[this.state.project].gitURL} target='_blank'><h4>Github</h4></a>
+                  <h4>{projectData[this.state.project].about}</h4>
+                </div>
+            </div>
           </div>
         </Modal>
         <Masonry
