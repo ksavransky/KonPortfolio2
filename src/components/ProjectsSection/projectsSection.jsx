@@ -7,6 +7,9 @@ import MarkovPhoto from '../../images/projects/markov.png'
 import PongPhoto from '../../images/projects/pong.png'
 import AlgoPhoto from '../../images/projects/algotracker.png'
 import HipstergramVideo from '../../video/hipstergram.webm'
+import MarkovVideo from '../../video/markov.webm'
+import PongVideo from '../../video/pong.webm'
+import AlgoVideo from '../../video/algo.webm'
 import { Player } from 'video-react'
 import '../../../node_modules/video-react/dist/video-react.css'
 import './projectsSection.css'
@@ -22,24 +25,27 @@ const projectData = {
   },
   pong: {
     title: 'Super Pong',
-    about: 'About Super Pong',
-    tech: 'Tech about Super Pong',
-    liveURL: 'www.google.com',
-    gitURL: 'www.google.com'
+    about: 'Super Pong is a web implementation of the classic video game Pong. It has cool 80s styling and some fun bonus features.',
+    tech: 'Super Pong was developed using Javascript, Canvas, and HTML/CSS',
+    liveURL: 'http://preacher-wolf-83250.bitballoon.com/',
+    gitURL: 'https://github.com/ksavransky/SuperPong',
+    video: PongVideo
   },
   algoTracker: {
     title: 'AlgoTracker',
-    about: 'About AlgoTracker',
-    tech: 'Tech about AlgoTracker',
-    liveURL: 'www.google.com',
-    gitURL: 'www.google.com'
+    about: 'AlgoTracker graphs the run time of various algorithms across numerous inputs. It graphs sorting algorithm performance, comparing the run time of six popular sorting algorithms based on five randomized unsorted arrays of different lengths. The application also allows a user to write up to two custom Javascript functions and compare their run times against each other across five inputs via a graph and a simulated console result log.',
+    tech: 'AlgoTracker was developed using Javascript, D3, and HTML/CSS.',
+    liveURL: 'http://jockey-enlistment-68560.bitballoon.com/',
+    gitURL: 'https://github.com/ksavransky/AlgoTracker',
+    video: AlgoVideo
   },
   markov: {
     title: 'Markov Chain Tweets',
-    about: 'About Markov Chain Tweets',
-    tech: 'Tech about Markov Chain Tweets',
-    liveURL: 'www.google.com',
-    gitURL: 'www.google.com'
+    about: 'Markov Chain Tweets is a web application that allows you to search for a twitter user and see their latest 10 tweets! Then, using a Markov Chain algorithm, you can generate new tweets based on the text of the real tweets. You can also re-order the last ten tweets based on a customizable Markov Chain controlled by your inputs.',
+    tech: 'Markov Chain Tweets was built using React/ES6, NodeJS, the Twitter API, Webpack, Foundation, and Flexbox CSS.',
+    liveURL: 'https://markovtweets.herokuapp.com/',
+    gitURL: 'https://github.com/ksavransky/MarkovTweets',
+    video: MarkovVideo
   }
 }
 
