@@ -36,12 +36,12 @@ function sendEmail(req, res){
       // send mail with defined transport object
       transporter.sendMail(mailOptions, (error, info) => {
           if (error) {
-            error('Message sent: ' + info.messageId)
+            error('Message sent: ' + info)
             return console.log(error);
           }
-          console.log('Message sent: %s', info.messageId);
+          console.log('Message sent: %s', info);
 
-          success('Message sent: ' + info.messageId)
+          success('Message sent: ' + info)
       });
   });
 }
