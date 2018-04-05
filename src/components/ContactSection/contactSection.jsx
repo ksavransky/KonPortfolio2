@@ -8,37 +8,51 @@ class ContactSection extends Component {
     super(props)
 
     this.state = {
-      messageBody: null,
-      messageSubject: null,
-      messageEmail: null
+      messageSent: false
     }
 
     this.sendMessage = this.sendMessage.bind(this)
   }
 
   sendMessage () {
-    this.props.actions.sendEmail('tesstttt email')
+    const name = 'Name: ' + this.refs.name.value
+    const email = ' Email: ' + this.refs.email.value
+    const message = ' Message: ' + this.refs.message.value
+    this.props.actions.sendEmail(name + email + message)
+    this.setState({
+      messageSent: true
+    })
   }
 
   render() {
-    return (
-      <div id='contact-section'>
-        <h2>Contact Me</h2>
-        <div className='label-text'>
-          <h3>Name</h3>
-          <input type='text'/>
+    if (!this.state.messageSent) {
+      return (
+        <div id='contact-section'>
+          <h2>Contact Me</h2>
+          <div className='label-text'>
+            <h3>Name</h3>
+            <input ref='name' type='text'/>
+          </div>
+          <div className='label-text'>
+            <h3>Email</h3>
+            <input ref='email' type='text'/>
+          </div>
+          <div className='label-text'>
+            <h3>Message</h3>
+            <textarea ref='message' type='text'/>
+          </div>
+          <button className='button' onClick={this.sendMessage}>Submit</button>
         </div>
-        <div className='label-text'>
-          <h3>Email</h3>
-          <input type='text'/>
+      )
+    } else {
+      return (
+        <div id='contact-section' className='sent'>
+          <h2>Thank You!</h2>
+          <h2>I will get back to you soon!</h2>
+          <button className='button' onClick={() => {this.setState({messageSent: false})}}>Send Another Message</button>
         </div>
-        <div className='label-text'>
-          <h3>Message</h3>
-          <textarea type='text'/>
-        </div>
-        <button className='button' onClick={this.sendMessage}>Submit</button>
-      </div>
-    )
+      )
+    }
   }
 }
 

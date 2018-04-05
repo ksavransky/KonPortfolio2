@@ -25,6 +25,15 @@
    1px 1px 0 #000;
 }
 
+#contact-section.sent {
+  justify-content: center;
+  background: url(../../images/backgrounds/ggbridge-night.jpg);
+}
+
+#contact-section.sent h2 {
+  margin-bottom: 50px;
+}
+
 #contact-section h2, #contact-section h3 {
   display: inline;
 }
