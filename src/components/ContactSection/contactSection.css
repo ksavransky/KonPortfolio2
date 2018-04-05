@@ -1,0 +1,71 @@
+#contact-section {
+  background: url(../../images/backgrounds/ggbridge-dawn.jpg);
+  height: 100%;
+  min-height: 700px;
+  width: 100%;
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
+  margin: 0;
+  position: relative;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-shadow:
+ -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+   1px 1px 0 #000;
+}
+
+#contact-section h2, #contact-section h3 {
+  display: inline;
+}
+
+#contact-section h2 {
+  align-self: center;
+  margin-top: 30px;
+}
+
+#contact-section .label-text {
+  width: 90%;
+  max-width: 900px;
+  align-self: center;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+#contact-section .label-text input {
+  margin-top: 16px;
+  height: 60px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#contact-section .label-text textarea {
+  height: 20vh;
+  min-height: 200px;
+  margin-top: 16px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  resize: none;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+#contact-section .button {
+  margin-top: 16px;
+  width: 90%;
+  font-size: 1.2rem;
+  max-width: 300px;
+  align-self: center;
+  height: 60px;
+}

@@ -23,7 +23,20 @@ class ContactSection extends Component {
   render() {
     return (
       <div id='contact-section'>
-        <button onClick={this.sendMessage}>Test Email</button>
+        <h2>Contact Me</h2>
+        <div className='label-text'>
+          <h3>Name</h3>
+          <input type='text'/>
+        </div>
+        <div className='label-text'>
+          <h3>Email</h3>
+          <input type='text'/>
+        </div>
+        <div className='label-text'>
+          <h3>Message</h3>
+          <textarea type='text'/>
+        </div>
+        <button className='button' onClick={this.sendMessage}>Submit</button>
       </div>
     )
   }
