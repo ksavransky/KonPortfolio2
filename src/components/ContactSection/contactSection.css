@@ -1,7 +1,7 @@
 #contact-section {
   background: url(../../images/backgrounds/ggbridge-dawn.jpg);
   height: 100%;
-  min-height: 700px;
+  min-height: 750px;
   width: 100%;
   -webkit-background-size: 100%;
   -moz-background-size: 100%;
@@ -17,12 +17,7 @@
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  color: white;
-  text-shadow:
- -1px -1px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-   1px 1px 0 #000;
+  color: #423434;
 }
 
 #contact-section.sent {
@@ -77,4 +72,6 @@
   max-width: 300px;
   align-self: center;
   height: 60px;
+  min-height: 60px;
+  margin-bottom: 30px;
 }
